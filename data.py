@@ -13,7 +13,7 @@ model.fc = Identity()
 model.eval().requires_grad_(False).to(device)
 trainFeatures = zeros(0, 2048, device=device)
 trainLabels = zeros(0, dtype=long, device=device)
-for i in range(4):
+for i in range(1, 5):
     preprocess = transforms.Compose([
         transforms.Resize(256),
         transforms.CenterCrop(224),
